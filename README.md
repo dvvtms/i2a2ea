@@ -6,7 +6,7 @@
 * In-app notifications (beta)
 
 ## Installation
-#### Clone
+#### Clone & npm install
 ```sh
 $ git clone https://github.com/tomasvio/i2a2ea.git
 $ cd i2a2ea
@@ -47,5 +47,5 @@ Node Version: v6.3.1
 Xcode version: Xcode 7.3.1 Build version 7D1014
 ```
 ## Issues
-#### White screen after ```ionic serve```
+**White screen after ```ionic serve``` ?**
 Dont forget Update Firebase 3 credentials.
