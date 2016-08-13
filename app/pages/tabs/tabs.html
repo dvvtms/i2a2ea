@@ -1,0 +1,3 @@
+<ion-tabs tabbarLayout="icon-top" tabbarPlacement="top">
+  <ion-tab *ngFor="let tab of tabPages" [root]="tab.component" tabTitle={{tab.title}} tabIcon={{tab.icon}}></ion-tab>
+</ion-tabs>
