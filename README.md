@@ -32,4 +32,20 @@ Update Firebase 3 credentials in ```app.ts```
  databaseURL: "<your-database-URL>",
  storageBucket: "<your-storage-bucket>"
  }
- ```
+```
+
+## Ionic info
+```
+Cordova CLI: 6.3.0
+Ionic Framework Version: 2.0.0-beta.11
+Ionic CLI Version: 2.0.0-beta.36
+Ionic App Lib Version: 2.0.0-beta.19
+ios-deploy version: 1.8.6
+ios-sim version: 5.0.8
+OS: Mac OS X El Capitan
+Node Version: v6.3.1
+Xcode version: Xcode 7.3.1 Build version 7D1014
+```
+## Issues
+#### White screen after ```ionic serve```
+Dont forget Update Firebase 3 credentials.
