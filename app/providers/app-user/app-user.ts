@@ -34,6 +34,6 @@ export class AppUser {
         "email": _authData.auth.email
       });
     }
-
+  }
 }
 
