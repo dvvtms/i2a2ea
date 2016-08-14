@@ -25,7 +25,7 @@ const firebaseConfig = {
  *
  * @export
  * @class MyApp
- * @version 0.4
+ * @version 0.5
  */
 @Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>'
