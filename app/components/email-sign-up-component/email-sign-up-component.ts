@@ -21,7 +21,7 @@ import {
  *
  * @export
  * @class EmailSignUpComponent
- * @version 0.6.1
+ * @version 0.6.2
  *
  * @todo add username & username validation ...
  */
@@ -89,7 +89,7 @@ export class EmailSignUpComponent {
 
   }
 
-onSubmit(_formData: { userName: string, email: string, password: string, passwordConfirm: string }) {
+  onSubmit(_formData: { userName: string, email: string, password: string, passwordConfirm: string }) {
 
     event.preventDefault();
 
@@ -105,6 +105,7 @@ onSubmit(_formData: { userName: string, email: string, password: string, passwor
         this.appNotify.onError({ message: this.error.message || this.error });
         console.log(this.error);
         this.password.updateValue('');
+        this.passwordConfirm.updateValue('');
       });
   }
 

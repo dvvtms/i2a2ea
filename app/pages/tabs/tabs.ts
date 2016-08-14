@@ -1,13 +1,13 @@
 import {Component} from '@angular/core';
 import {HomePage} from '../home/home';
 import {NgFor} from '@angular/common';
-
+import {SettingsPage} from '../settings/settings';
 /**
  *
  *
  * @export
  * @class TabsPage
- * @version 0.1
+ * @version 0.2
  */
 @Component({
   templateUrl: 'build/pages/tabs/tabs.html',
@@ -24,7 +24,8 @@ export class TabsPage {
   constructor() {
 
     this.tabPages = [
-      { title: 'HomePage', component: HomePage, icon: 'home' },
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Settings', component: SettingsPage, icon: 'settings' },
     ];
 
   }

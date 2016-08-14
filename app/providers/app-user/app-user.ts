@@ -7,7 +7,7 @@ import {AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
  *
  * @export
  * @class AppUser
- * @version 0.3
+ * @version 0.5
  */
 @Injectable()
 export class AppUser {
@@ -35,5 +35,13 @@ export class AppUser {
       });
     }
   }
-}
 
+  signOut(): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+      let signOutFunc = this.af.auth.logout();
+      resolve(signOutFunc);
+      reject(new Error('Something happened...'));
+    });
+  }
+
+}
