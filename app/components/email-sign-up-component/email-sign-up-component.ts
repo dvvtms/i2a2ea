@@ -21,7 +21,7 @@ import {
  *
  * @export
  * @class EmailSignUpComponent
- * @version 0.6
+ * @version 0.6.1
  *
  * @todo add username & username validation ...
  */
@@ -89,13 +89,13 @@ export class EmailSignUpComponent {
 
   }
 
-  onSubmit(formData: { userName: string, email: string, password: string, passwordConfirm: string }) {
+onSubmit(_formData: { userName: string, email: string, password: string, passwordConfirm: string }) {
 
     event.preventDefault();
 
-    this.emailAuth.signUp(formData)
+    this.emailAuth.signUp(_formData)
       .then((succes) => {
-       this.viewCtrl.dismiss()
+        this.viewCtrl.dismiss()
           .then((success) => {
             this.appNotify.onSuccess({ message: 'Succesfully signed-up!' });
           });

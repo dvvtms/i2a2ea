@@ -10,7 +10,7 @@ import * as Firebase from 'firebase';
 
 /**
  * EmailAuth provider
- * @version 0.3
+ * @version 0.4
  */
 export class EmailAuth {
 
@@ -22,23 +22,22 @@ export class EmailAuth {
     this.appUser = appUser;
   }
 
-  signIn(_credentials) {
+  signIn(_formData, _isSignUp?: boolean) {
 
-    return this.af.auth.login(_credentials, {
+    return this.af.auth.login(_formData, {
       provider: AuthProviders.Password,
       method: AuthMethods.Password
     })
       .then((user) => {
-        this.appUser.addOrUpdate(user);
+        this.appUser.addOrUpdate(user, { userName: _formData.userName, }, _isSignUp);
       });
-
   }
 
-  signUp(_credentials) {
+  signUp(_formData) {
 
-    return this.af.auth.createUser(_credentials)
+    return this.af.auth.createUser(_formData)
       .then((user) => {
-        return this.signIn(_credentials);
+        return this.signIn(_formData, true);
       });
   }
 
