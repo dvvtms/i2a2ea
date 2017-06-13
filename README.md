@@ -1,8 +1,7 @@
 # Check out new project !
 [ionic2-auth-example](https://github.com/devvtms/ionic2-auth-example)
 
-# Not maintained...
-
+#### This project not longer maintained...
 ## i2a2ea - Ionic 2 AngularFire 2 Email Authentication
 ## Features
 * Email Sign-In with form validation
